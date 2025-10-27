@@ -688,3 +688,5 @@ zipp==3.23.0
     # via importlib-metadata
 zstandard==0.23.0
     # via langsmith
+google-api-python-client==2.185.0
+    # via googleapi
