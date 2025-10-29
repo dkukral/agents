@@ -15,3 +15,9 @@ search_agent = Agent(
     model="gpt-4o-mini",
     model_settings=ModelSettings(tool_choice="required"),
 )
+
+search_agent_tool = search_agent.as_tool(
+    tool_name="search_agent",
+    tool_description="A research assistant that searches the web and provides concise summaries"
+)
+

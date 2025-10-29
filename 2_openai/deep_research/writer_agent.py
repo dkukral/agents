@@ -25,3 +25,9 @@ writer_agent = Agent(
     model="gpt-4o-mini",
     output_type=ReportData,
 )
+
+writer_agent_tool = writer_agent.as_tool(
+    tool_name="writer_agent",
+    tool_description="A research assistant that helps write detailed reports"
+)
+
