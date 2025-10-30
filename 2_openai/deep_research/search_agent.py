@@ -8,6 +8,8 @@ INSTRUCTIONS = (
     "essence and ignore any fluff. Do not include any additional commentary other than the summary itself."
 )
 
+
+
 search_agent = Agent(
     name="Search agent",
     instructions=INSTRUCTIONS,

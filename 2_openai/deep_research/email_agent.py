@@ -19,9 +19,10 @@ def send_email(subject: str, html_body: str) -> Dict[str, str]:
     return "success"
 
 
-INSTRUCTIONS = """You are able to send a nicely formatted HTML email based on a detailed report.
-You will be provided with a detailed report. You should use your tool to send one email, providing the 
-report converted into clean, well presented HTML with an appropriate subject line."""
+INSTRUCTIONS = """You are able to send a nicely formatted HTML email based on a detailed report. 
+You will be provided with a detailed report. Convert the whole detailed report to HTML. 
+You should use your tool to send one email, providing the report converted into clean, 
+well presented HTML with an appropriate subject line."""
 
 email_agent = Agent(
     name="Email agent",
