@@ -18,11 +18,11 @@ class Coder():
         return Agent(
             config=self.agents_config['coder'],
             verbose=True,
-            allow_code_execution=True,
+            allow_code_execution=False,  # Temporarily disabled until Docker is accessible
             code_execution_mode="safe",  # Uses Docker for safety
             max_execution_time=30, 
-            max_retry_limit=3 
-    )
+            max_retry_limit=5 
+        )
 
 
     @task

@@ -7,13 +7,16 @@ from crewai_tools import SerperDevTool
 class ResearchCrew():
     """Research crew for comprehensive topic analysis and reporting"""
 
+    agents_config = 'config/agents.yaml'
+    tasks_config = 'config/tasks.yaml'
+
     @agent
     def researcher(self) -> Agent:
         return Agent(
             config=self.agents_config['researcher'],
             verbose=True,
-            tools=[SerperDevTool()]
-        )
+            tools=[SerperDevTool(search_type='news', tbs='qdr:y')])
+        
 
     @agent
     def analyst(self) -> Agent:

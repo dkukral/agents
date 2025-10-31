@@ -11,9 +11,16 @@ class Debate():
     tasks_config = 'config/tasks.yaml'
 
     @agent
-    def debater(self) -> Agent:
+    def debater_for(self) -> Agent:
         return Agent(
-            config=self.agents_config['debater'],
+            config=self.agents_config['debater_for'],
+            verbose=True
+        )
+    
+    @agent
+    def debater_against(self) -> Agent:
+        return Agent(
+            config=self.agents_config['debater_against'],
             verbose=True
         )
 
